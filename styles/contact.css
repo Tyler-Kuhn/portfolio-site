@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+h1 {
+    margin-top: 70px;
+    color: hsla(221, 24%, 76%, 1);
+    text-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);
+}
+form {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    background-color: hsla(210, 2%, 25%,  0.75);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);
+    height: auto;
+    width: 35em;
+    padding: 5em;
+}
+
+.input-box {
+    margin: 1.5em;
+    font-size: 1.5em;
+}

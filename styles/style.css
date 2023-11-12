@@ -11,13 +11,34 @@ html {
     font-size: 16px;
     background-image: url(../resources/images/dark-computer-background.jpg);
     background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'DM Serif Display', serif;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: black;
+  }
+   
+::-webkit-scrollbar-thumb {
+    background: hsla(210, 2%, 25%,  1); 
+    border-radius: 10px;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: hsla(221, 24%, 76%, 1);; 
+  }
 
 .bold {
     font-weight: bold;
+}
+.large {
+    font-size: 35px;
 }
 
 /*Navigation*/
@@ -46,7 +67,6 @@ nav li {
     text-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);
     font-size: 1.5em;
     margin: 0 50px 75px 0;
-    ;
 }
 nav a {
     text-decoration: none;
@@ -60,82 +80,41 @@ nav p {
     color: hsla(221, 24%, 76%, 1);
     text-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);
     font-size: 2em;
-    font-family: 'DM Serif Display', serif;
     margin-left: 25px;
     margin-top: 10px;
 }
-/*Main Content*/
 
-
-/*Title Section*/
-
-#title {
-    height: 700px;
+footer {
+    height: 100px;
+    width: 100%;
+    height: 50px;
 }
 
-#title-content {
-    padding-top: 300px;
-    padding-left: 135px;
+footer ul {
+    text-align: left;
+    margin: 0px 25px;
 }
 
-h1 {
+footer li {
+    display: inline;
+    font-weight: bold;
     color: hsla(221, 24%, 76%, 1);
     text-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);
-    font-size: 35px;
+    font-size: 1.5em;
+    margin: 0 50px 75px 0;
 }
-#small-letters {
-    font-size: 16px;
-}
-
-/*Projects Section*/
-
-#projects {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: auto;
-    background-image: url(../resources/images/dark-squares.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-items: center;
-    align-items: center;
-}
-
-#projects-header {
-    display: flex;
-    padding-top: 25px; 
+footer a {
+    text-decoration: none;
     color: hsla(221, 24%, 76%, 1);
-    text-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);  
+}
+footer a:visited {
+    color: hsla(221, 24%, 76%, 1);
 }
 
-#projects-main {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    margin-left: 350px;
-    margin-right: 60px;
-    margin-bottom: 60px;
-    padding: 10px;
-    height: auto;
-    width: 25em;
-    align-items: center;
-    border-width: 3px;
-    border-style: solid;
-    border-color: hsla(210, 2%, 25%,  1);
-    background-color: hsla(221, 24%, 76%, .5);;
-}
-
-#projects-main h3 {
-    margin: 10px;
-}
-
-#projects-main p {
-    margin: 10px;
+footer p {
+    color: hsla(221, 24%, 76%, 1);
+    text-shadow: 1px 1px 2px hsla(0, 100%, 50%, 1), 0 0 1em hsla(240, 100%, 50%, 1), 0 0 0.2em hsla(240, 100%, 50%, 1);
+    font-size: 2em;
+    margin-left: 25px;
+    margin-top: 10px;
 }
