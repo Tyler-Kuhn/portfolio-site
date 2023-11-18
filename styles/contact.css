@@ -1,3 +1,4 @@
+
 main {
     display: flex;
     align-items: center;
@@ -21,9 +22,65 @@ form {
     height: auto;
     width: 35em;
     padding: 5em;
+    width: 35em; /* Adjust width for larger screens */
 }
-
 .input-box {
     margin: .5em;
     font-size: 1.5em;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+input:invalid, textarea:invalid {
+    border: 2px solid red;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Large screens */
+@media screen and (min-width: 1201px) {
+    /* Custom styles for large screens */
+}
+
+/* Laptops */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    form {
+        width: 30em; /* Slightly smaller width for laptops */
+    }
+    .input-box {
+        font-size: 1.2em; /* Adjust font size for better readability */
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    form {
+        width: 25em; /* Adjust width for tablets */
+        padding: 3em; /* Reduce padding for compact layout */
+    }
+    .input-box {
+        font-size: 1em; /* Smaller font size for tablet screens */
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 75px; /* Reduce margin for compact layout */
+    }
+    h1 {
+        margin-top: 35px; /* Smaller margin for the heading */
+    }
+    form {
+        width: auto; /* Full width on small screens */
+        padding: 2em; /* Reduce padding for mobile devices */
+    }
+    .input-box {
+        font-size: 0.8em; /* Smaller font size for better fit on mobile */
+        margin: 0.3em; /* Reduce margin */
+    }
 }

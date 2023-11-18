@@ -25,14 +25,17 @@
             <section class="input-box">
                 <label for="fName">First Name:</label>
                 <input id="fName" type="text" name="fName" minlength="2" maxlength="20" placeholder="Enter your First Name" required>
+                <span id="fNameError" class="error">Invalid Input</span>
             </section>
             <section class="input-box">
                 <label for="lName">Last Name:</label>
                 <input id="lName" type="text" name="lName" minlength="2" maxlength="20" placeholder="Enter your Last Name" required>
+                <span id="lNameError" class="error">Invalid Input</span>
             </section>
             <section class="input-box">
                 <label for="email">Email:</label>
                 <input id="email" type="email" name="email" maxlength="30" placeholder="Enter your Email" required>
+                <span id="emailError" class="error">Invalid email address</span>
             </section>
             <section class="input-box">
                 <label for="message">Message:</label>
@@ -42,5 +45,6 @@
             <input type="submit" value="Send">
         </form>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

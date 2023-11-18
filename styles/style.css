@@ -118,3 +118,60 @@ footer p {
     margin-left: 25px;
     margin-top: 10px;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Large screens */
+@media screen and (min-width: 1201px) {
+    /* Add custom styles for large screens here */
+}
+
+/* Laptops */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Add custom styles for laptops here */
+    nav li, footer li {
+        font-size: 1.2em; /* Slightly smaller font size for better spacing */
+        margin: 0 30px 75px 0;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Adjustments for tablets */
+    nav ul, footer ul {
+        margin: 0px 15px;
+    }
+    nav li, footer li {
+        font-size: 1em; /* Smaller font size for tablet screens */
+        margin: 0 20px 50px 0;
+    }
+    footer p, nav p {
+        font-size: 1.5em;
+        margin-left: 15px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    nav, footer {
+        text-align: center;
+    }
+    nav ul, footer ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    nav li, footer li {
+        display: block; /* Stack menu items vertically */
+        font-size: 1em;
+        margin: 5px 0; /* Reduce margin for compact layout */
+    }
+    nav p, footer p {
+        font-size: 1.2em;
+        margin: 5px 0;
+    }
+    .large {
+        font-size: 25px; /* Adjust large text size for mobile */
+    }
+}

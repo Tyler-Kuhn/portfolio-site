@@ -116,3 +116,66 @@ h1 {
 #about-main p {
     font-size: 20px;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Large screens */
+@media screen and (min-width: 1201px) {
+    /* Custom styles for large screens */
+}
+
+/* Laptops */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Adjustments for laptops */
+    #title {
+        height: 600px;
+    }
+    #title-content {
+        padding-top: 200px;
+        padding-left: 100px;
+    }
+    #projects-main .project, #about-main {
+        width: 50em; /* Adjust width for better layout */
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Adjustments for tablets */
+    #title {
+        height: 500px;
+    }
+    #title-content {
+        padding-top: 150px;
+        padding-left: 50px;
+    }
+    #projects-main .project, #about-main {
+        width: 40em; /* Adjust width for tablet screens */
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    #title {
+        height: 400px;
+    }
+    #title-content {
+        padding-top: 100px;
+        padding-left: 20px;
+    }
+    h1 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+    #small-letters {
+        font-size: 14px;
+    }
+    #projects-main .project, #about-main {
+        width: auto; /* Full width on small screens */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .project {
+        margin-left: 0; /* Remove left margin */
+    }
+}
