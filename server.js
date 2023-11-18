@@ -1,33 +1,23 @@
-require('dotenv').config();
 const express = require('express');
-const nodemailer = require('nodemailer');
+const fs = require('fs');
 const app = express();
 
-app.use(express.json()); // To parse JSON bodies
+app.use(express.json());
 
 app.post('/send', (req, res) => {
-    const transporter = nodemailer.createTransport({
-        service: 'Outlook365',
-        auth: {
-            user: process.env.EMAIL_USER, // Access environment variable
-            pass: process.env.EMAIL_PASS  // Access environment variable
-        }
-    });
+    // Extracting form data
+    const { firstName, lastName, email, message } = req.body;
 
-    const mailOptions = {
-        from: process.env.EMAIL_USER, 
-        to: process.env.EMAIL_RECIPIENT, 
-        subject: 'New Contact Form Message', 
-        text: `You have a new message from ${req.body.firstName} ${req.body.lastName} (${req.body.email}): ${req.body.message}` // Include all form fields
-    };
+    // Data to be written
+    const dataToWrite = `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}\n\n`;
 
-    transporter.sendMail(mailOptions, function(err, info) {
+    // Append data to a file
+    fs.appendFile('submissions.txt', dataToWrite, (err) => {
         if (err) {
-            console.log(err);
-            res.status(500).send('Error sending email');
+            console.error('Error writing to file:', err);
+            res.status(500).send('Error saving data');
         } else {
-            console.log(info);
-            res.status(200).send('Email Sent Successfully');
+            res.status(200).send('Data saved successfully');
         }
     });
 });
